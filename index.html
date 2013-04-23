@@ -1,0 +1,49 @@
+<head>
+	<title>
+	Zombie
+	</title>
+		<style type="text/css">
+			.gameCanvas {
+				position: relative;
+				left: 0px;
+				top: 0px;
+			}
+			#container {
+				box-shadow: 0px 0px 30px rgba(50, 50, 50, 0.75);
+				cursor:crosshair;
+				overflow: hidden;
+			}
+			#debug {
+				color: #ff0000;
+			}
+			#fps {
+				z-index: 100;
+				color: #ff0000;
+				position: absolute;
+				top: 20px;
+				left: 20px;
+			}
+		</style>
+	<script type="text/javascript" src="lib/Jquery.js"></script>
+	<script type="text/javascript" src="lib/Inheritance.js"></script>
+	<script type="text/javascript" src="lib/library.js"></script>
+	<script type="text/javascript" src="src/entity.js"></script>
+	<script type="text/javascript" src="src/terrain.js"></script>
+	<script type="text/javascript" src="src/mob.js"></script>
+	<script type="text/javascript" src="src/hostilemob.js"></script>
+	<script type="text/javascript" src="src/weapon.js"></script>
+	<script type="text/javascript" src="src/rifle.js"></script>
+	<script type="text/javascript" src="src/shotgun.js"></script>
+	<script type="text/javascript" src="src/player.js"></script>
+	<script type="text/javascript" src="src/level.js"></script>
+	<script type="text/javascript" src="src/bullet.js"></script>
+	<script type="text/javascript" src="src/riflebullet.js"></script>
+	<script type="text/javascript" src="src/shotgunbullet.js"></script>
+	<script type="text/javascript" src="src/game.js"></script>
+	<script type="text/javascript" src="src/art.js"></script>
+</head>
+<body>
+	<div id="fps"></div>
+	<div id="container"></div>
+	<div id="debug"></div>
+</body>
