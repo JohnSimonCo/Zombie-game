@@ -3,6 +3,9 @@
 	Zombie
 	</title>
 		<style type="text/css">
+			body {
+				margin: 0px;
+			}
 			.gameCanvas {
 				position: relative;
 				left: 0px;
@@ -14,7 +17,11 @@
 				overflow: hidden;
 			}
 			#debug {
+				z-index: 100;
 				color: #ff0000;
+				position: absolute;
+				bottom: 100px;
+				left: 20px;
 			}
 			#fps {
 				z-index: 100;

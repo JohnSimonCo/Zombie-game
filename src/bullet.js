@@ -20,9 +20,11 @@ var Bullet = Mob.extend({
 		return other.team != this.team;
 	},
 	collide: function(other, xa, ya) {
-		if(this.isEnemyOf(other)) {
-			other.hurt(this, this.damage);
-			this.die();
+		if(other instanceof Entity) {
+			if(this.isEnemyOf(other)) {
+				other.hurt(this, this.damage);
+				this.die();
+			}
 		} else {
 			this.xd += xa * 2;
 			this.yd += ya * 2;

@@ -1,16 +1,14 @@
 var LEVEL_CANVAS = 0, ENTITY_CANVAS = 1;
 var canvases = [], level;
-$(document).ready(function() {
-	init(1900, 1000);
-	var levelWidth = 2300;
-	var levelHeight = 1400;
+function startGame() {
+	init(window.innerWidth, window.innerHeight);
+	var levelWidth = Art.background.width;
+	var levelHeight = Art.background.height;
 	level = new Level(levelWidth, levelHeight);
 	canvases.push(createCanvas(levelWidth, levelHeight, 'gameCanvas', 'levelCanvas'));
+	canvases.push(createCanvas(levelWidth, levelHeight, 'gameCanvas', 'terrainCanvas'));
 	canvases.push(createCanvas(width, height, 'gameCanvas', 'entityCanvas'));
-});
-
-function startGame() {
-	level.prepare(canvases[0], null, canvases[1]);
+	level.prepare(canvases[0], canvases[1], canvases[2]);
 }
 
 function update(delta) {

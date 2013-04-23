@@ -1,10 +1,11 @@
 var dir = 'res/'
-var sources = ['player.png', 'zombie.png'], images = [];
+var sources = ['player.png', 'zombie.png', 'background.png'], images = [];
 
 var Art = new function() {
 	this.imagesLoaded = function() {
 		this.player = new createSheet(images[0], 50, 50);
 		this.zombie = new createSheet(images[1], 50, 50);
+		this.background = images[2];
 	}
 }
 

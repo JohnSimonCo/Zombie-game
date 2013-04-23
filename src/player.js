@@ -92,7 +92,6 @@ var Player = Mob.extend({
 	hurt: function(source, damage) {
 		if(!(source instanceof HostileMob && this.hurtTime > 0)) {
 			this.health -= damage;
-			debug(this.health);
 			if (this.health <= 0)
 				this.die();
 			var dist = source.pos.dist(this.pos);
